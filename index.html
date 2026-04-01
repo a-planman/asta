@@ -6,202 +6,173 @@
   <title>AsTa – AsiointiTabletti</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
       background-color: #f4f6f8;
-      color: #222;
+      color: #1f2937;
     }
 
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 12px 16px;
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 14px 24px;
+      position: relative;
     }
+
+    /* LOGO */
+    .logo {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      max-height: 85px;
+      max-width: 260px;
+      width: auto;
+      height: auto;
+      display: block;
+     }
 
     .header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-      margin-top: 10px;
+      text-align: center;
       margin-bottom: 10px;
-      padding: 0 20px;
-      flex-wrap: wrap;
+      margin-top: 28px;
     }
 
-    .logo {
-      height: 80px;
-      width: auto;
-      border-radius: 10px;
-    }
-
-    .logo-text {
-      text-align: left;
-    }
-
-    .logo-main {
-      font-size: 28px;
-      font-weight: bold;
-      line-height: 1.1;
-    }
-
-    .logo-sub {
-      font-size: 16px;
-      color: #555;
-      margin-top: 4px;
+    .header h1 {
+      margin: 0;
+      font-size: 2rem;
       line-height: 1.2;
     }
 
-    h1 {
-      margin: 16px 20px 4px 20px;
-      font-size: 38px;
-      font-weight: bold;
+    .header p {
+      margin: 8px 0 0;
+      font-size: 1.05rem;
+      color: #4b5563;
     }
 
-    h2 {
-      margin: 0 20px 28px 20px;
-      font-size: 24px;
-      font-weight: normal;
-      color: #444;
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
     }
 
-    .button-container {
-      width: 100%;
-      max-width: 420px;
-      margin: 0 auto 40px auto;
+    .column {
+      background: white;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .column h2 {
+      margin: 0 0 12px 0;
+      text-align: center;
+      font-size: 1.25rem;
     }
 
     .button {
       display: block;
       width: 100%;
-      box-sizing: border-box;
-      margin: 14px auto;
-      padding: 18px 20px;
-      font-size: 24px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.15rem;
       font-weight: bold;
+      padding: 16px 10px;
+      margin: 8px 0;
+      border-radius: 14px;
       background-color: #2d6cdf;
       color: white;
-      text-decoration: none;
-      border-radius: 14px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
-    .button:active {
-      transform: scale(0.98);
+    .button:hover {
+      background-color: #1f57b8;
     }
 
+    /* INFO-LAATIKKO */
     .info-box {
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      background-color: #ffffff;
-      border: 2px solid #2d6cdf;
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-size: 15px;
-      line-height: 1.4;
-      color: #222;
-      text-align: left;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-      max-width: 240px;
+      margin-top: 12px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 12px;
+      font-size: 0.95rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
     }
 
-    .info-title {
-      font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 4px;
+    .info-box strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
     }
 
-    @media (max-width: 900px) {
+    .footer {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    @media (max-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
       .logo {
-        height: 70px;
-      }
-
-      .logo-main {
-        font-size: 24px;
-      }
-
-      .logo-sub {
-        font-size: 15px;
-      }
-
-      h1 {
-        font-size: 32px;
-      }
-
-      h2 {
-        font-size: 21px;
-      }
-
-      .button {
-        font-size: 22px;
-        padding: 16px 18px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .header {
-        flex-direction: column;
-      }
-
-      .logo-text {
-        text-align: center;
-      }
-
-      h1 {
-        font-size: 28px;
-      }
-
-      h2 {
-        font-size: 20px;
-      }
-
-      .button-container {
-        max-width: 90%;
-      }
-
-      .button {
-        font-size: 20px;
-      }
-
-      .info-box {
-        max-width: 200px;
-        font-size: 14px;
+        height: 50px;
       }
     }
   </style>
 </head>
 
 <body>
+  <div class="page">
 
-  <div class="header">
-    <img src="diki-logo.png" alt="DiKi-logo" class="logo">
-    <div class="logo-text">
-      <div class="logo-main">Digiin kiinni</div>
-      <div class="logo-sub">Digilaitteiden kierrätyksellä</div>
+    <!-- LOGO -->
+    <img src="diki-logo.png" class="logo">
+
+    <div class="header">
+      <h1>AsTa – AsiointiTabletti</h1>
+      <p>Peruspalvelut turvalliseen verkkoasiointiin</p>
     </div>
+
+    <div class="grid">
+      <div class="column">
+        <h2>Pankit</h2>
+
+        <a class="button" href="https://www.op.fi/">OP</a>
+        <a class="button" href="https://www.poppankki.fi/">POP Pankki</a>
+        <a class="button" href="https://www.s-pankki.fi/">S-Pankki</a>
+        <a class="button" href="https://www.saastopankki.fi/">Säästöpankki</a>
+        <a class="button" href="https://www.aktia.fi/">Aktia</a>
+        <a class="button" href="https://www.nordea.fi/">Nordea</a>
+        <a class="button" href="https://danskebank.fi/">Danske Bank</a>
+      </div>
+
+      <div class="column">
+        <h2>Muut palvelut</h2>
+
+        <a class="button" href="https://pshyvinvointialue.fi/">OmaSavo</a>
+        <a class="button" href="https://www.kanta.fi/omakanta">OmaKanta</a>
+        <a class="button" href="https://www.suomi.fi/etusivu">Suomi.fi</a>
+        <a class="button" href="https://www.vero.fi/sahkoiset-asiointipalvelut/omavero/">OmaVero</a>
+        <a class="button" href="https://asiointi.poliisi.fi/">Poliisi</a>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="info-box">
+      <strong>DiKi ry:n tukipalvelu</strong>
+      tuki.diki2026@gmail.com
+    </div>
+
+    <div class="footer">
+      Tämä laite on tarkoitettu turvalliseen asiointikäyttöön.
+    </div>
+
   </div>
-
-  <h1>AsTa – AsiointiTabletti</h1>
-  <h2>Peruspalvelut</h2>
-
-  <div class="button-container">
-    <a href="https://www.op.fi/" class="button">Pankki (OP)</a>
-    <a href="https://www.omasavo.fi/" class="button">OmaSavo</a>
-    <a href="https://www.suomi.fi/" class="button">Suomi.fi</a>
-    <a href="https://www.kanta.fi/" class="button">OmaKanta</a>
-    <a href="https://www.vero.fi/omavero/" class="button">OmaVero</a>
-    <a href="https://poliisi.fi/" class="button">Poliisi</a>
-  </div>
-
-  <div class="info-box">
-    <div class="info-title">Tarvitsetko apua?</div>
-    DiKi ry:n tukipalvelu<br>
-    tuki.diki2026@gmail.com
-  </div>
-
 </body>
 </html>
