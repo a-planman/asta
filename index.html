@@ -2,177 +2,128 @@
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AsTa – AsiointiTabletti</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
-      color: #1f2937;
-    }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 16px 14px 24px;
-      position: relative;
-    }
-
-    /* LOGO */
-    .logo {
-      position: absolute;
-      top: 18px;
-      left: 18px;
-      max-height: 85px;
-      max-width: 260px;
-      width: auto;
-      height: auto;
-      display: block;
-     }
-
-    .header {
       text-align: center;
-      margin-bottom: 10px;
-      margin-top: 28px;
-    }
-
-    .header h1 {
+      background-color: #f4f6f8;
       margin: 0;
-      font-size: 2rem;
-      line-height: 1.2;
     }
 
-    .header p {
-      margin: 8px 0 0;
-      font-size: 1.05rem;
-      color: #4b5563;
+    .logo {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      height: 50px;
     }
 
-    .grid {
+    h1 {
+      margin-top: 20px;
+      font-size: 22px;
+    }
+
+    .subtitle {
+      margin-bottom: 15px;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      width: 260px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .bank-buttons {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 35px;
-      align-items: start;
-    }
-
-    .column {
-      background: white;
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .column h2 {
-      margin: 0 0 12px 0;
-      text-align: center;
-      font-size: 1.25rem;
+      gap: 10px;
     }
 
     .button {
       display: block;
-      width: 100%;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1.15rem;
-      font-weight: bold;
-      padding: 16px 10px;
-      margin: 8px 0;
-      border-radius: 14px;
+      padding: 10px;
+      font-size: 16px;
       background-color: #2d6cdf;
       color: white;
-    }
-
-    .button:hover {
-      background-color: #1f57b8;
-    }
-
-    /* INFO-LAATIKKO */
-    .info-box {
-      margin-top: 12px;
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 12px;
-      font-size: 0.95rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .info-box strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 1.05rem;
+      text-decoration: none;
+      border-radius: 10px;
     }
 
     .footer {
-      margin-top: 12px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-
-    @media (max-width: 760px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .logo {
-        height: 50px;
-      }
+      margin-top: 10px;
+      font-size: 12px;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
 
-    <!-- LOGO -->
-    <img src="diki-logo.png" class="logo">
+<img src="diki-logo.png" class="logo">
 
-    <div class="header">
-      <h1>AsTa – AsiointiTabletti</h1>
-      <p>Peruspalvelut turvalliseen verkkoasiointiin</p>
+<h1>AsTa – AsiointiTabletti</h1>
+<div class="subtitle">Peruspalvelut turvalliseen verkkoasiointiin</div>
+
+<div class="container">
+
+  <!-- PANKIT -->
+  <div class="card">
+    <h2>Pankit</h2>
+
+    <div class="bank-buttons">
+
+      <!-- Vasen sarake -->
+      <a href="https://www.op.fi/" class="button">OP</a>
+      <a href="https://www.saastopankki.fi/" class="button">Säästöpankki</a>
+
+      <a href="https://www.poppankki.fi/" class="button">POP Pankki</a>
+      <a href="https://www.omasp.fi/" class="button">OmaSP</a>
+
+      <a href="https://www.nordea.fi/" class="button">Nordea</a>
+      <a href="https://www.aktia.fi/" class="button">Aktia</a>
+
+      <a href="https://www.danskebank.fi/" class="button">Danske Bank</a>
+      <a href="https://www.s-pankki.fi/" class="button">S-Pankki</a>
+
     </div>
+  </div>
 
-    <div class="grid">
-      <div class="column">
-        <h2>Pankit</h2>
+  <!-- MUUT PALVELUT -->
+  <div class="card">
+    <h2>Muut palvelut</h2>
 
-        <a class="button" href="https://www.op.fi/">OP</a>
-        <a class="button" href="https://www.poppankki.fi/">POP Pankki</a>
-        <a class="button" href="https://www.s-pankki.fi/">S-Pankki</a>
-        <a class="button" href="https://www.saastopankki.fi/">Säästöpankki</a>
-        <a class="button" href="https://www.aktia.fi/">Aktia</a>
-        <a class="button" href="https://www.nordea.fi/">Nordea</a>
-        <a class="button" href="https://danskebank.fi/">Danske Bank</a>
-      </div>
-
-      <div class="column">
-        <h2>Muut palvelut</h2>
-
-        <a class="button" href="https://pshyvinvointialue.fi/">OmaSavo</a>
-        <a class="button" href="https://www.kanta.fi/omakanta">OmaKanta</a>
-        <a class="button" href="https://www.suomi.fi/etusivu">Suomi.fi</a>
-        <a class="button" href="https://www.vero.fi/sahkoiset-asiointipalvelut/omavero/">OmaVero</a>
-        <a class="button" href="https://asiointi.poliisi.fi/">Poliisi</a>
-      </div>
-    </div>
-
-    <!-- INFO -->
-    <div class="info-box">
-      <strong>DiKi ry:n tukipalvelu</strong>
-      tuki.diki2026@gmail.com
-    </div>
-
-    <div class="footer">
-      Tämä laite on tarkoitettu turvalliseen asiointikäyttöön.
-    </div>
+    <a href="https://www.omasavo.fi/" class="button">OmaSavo</a>
+    <a href="https://www.kanta.fi/omakanta" class="button">OmaKanta</a>
+    <a href="https://www.suomi.fi/" class="button">Suomi.fi</a>
+    <a href="https://www.vero.fi/" class="button">OmaVero</a>
+    <a href="https://poliisi.fi/" class="button">Poliisi</a>
+    <a href="https://www.kela.fi/" class="button">Kela</a>
 
   </div>
+
+</div>
+
+<div class="footer">
+  DiKi ry:n tukipalvelu<br>
+  tuki.diki2026@gmail.com
+</div>
+
 </body>
 </html>
