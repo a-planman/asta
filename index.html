@@ -12,70 +12,81 @@
       margin: 0;
     }
 
+    /* YLÄOSA */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
     .logo {
-      position: fixed;
-      top: 10px;
-      left: 10px;
       height: 50px;
     }
 
     h1 {
-      margin-top: 24px;
-      margin-bottom: 8px;
+      margin: 0;
       font-size: 22px;
     }
 
     .subtitle {
-      margin-bottom: 26px;
+      margin-top: 4px;
+      margin-bottom: 20px;
       color: #555;
       font-size: 14px;
     }
 
+    /* SISÄLTÖ */
     .container {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      gap: 28px;
+      gap: 24px;
       padding: 10px 20px 20px 20px;
+      flex-wrap: wrap; /* varmistaa toimivuuden pienillä näytöillä */
     }
 
     .card {
       background: #ffffff;
-      padding: 22px 20px 24px 20px;
+      padding: 20px;
       border-radius: 12px;
-      width: 280px;
+      width: 260px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .card h2 {
       font-size: 16px;
       margin-top: 0;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
+    /* PANKKINAPIT */
     .bank-buttons {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px 14px;
+      gap: 10px 12px;
     }
 
+    /* NAPIT */
     .button {
       display: block;
       padding: 12px 10px;
-      font-size: 16px;
+      font-size: 15px;
       background-color: #2d6cdf;
       color: white;
       text-decoration: none;
       border-radius: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .bank-buttons .button {
       margin-bottom: 0;
     }
 
+    /* FOOTER */
     .footer {
-      margin-top: 14px;
+      margin-top: 10px;
       font-size: 12px;
       color: #666;
       line-height: 1.4;
@@ -85,11 +96,16 @@
 
 <body>
 
-<img src="diki-logo.png" class="logo">
+<!-- YLÄOSA -->
+<div class="header">
+  <img src="diki-logo.png" class="logo" alt="DiKi-logo">
+  <div>
+    <h1>AsTa – AsiointiTabletti</h1>
+    <div class="subtitle">Peruspalvelut turvalliseen verkkoasiointiin</div>
+  </div>
+</div>
 
-<h1>AsTa – AsiointiTabletti</h1>
-<div class="subtitle">Peruspalvelut turvalliseen verkkoasiointiin</div>
-
+<!-- SISÄLTÖ -->
 <div class="container">
 
   <!-- PANKIT -->
@@ -97,7 +113,6 @@
     <h2>Pankit</h2>
 
     <div class="bank-buttons">
-
       <a href="https://www.op.fi/" class="button">OP</a>
       <a href="https://www.saastopankki.fi/" class="button">Säästöpankki</a>
 
@@ -109,7 +124,6 @@
 
       <a href="https://www.danskebank.fi/" class="button">Danske Bank</a>
       <a href="https://www.s-pankki.fi/" class="button">S-Pankki</a>
-
     </div>
   </div>
 
@@ -128,6 +142,7 @@
 
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
   DiKi ry:n tukipalvelu<br>
   tuki.diki2026@gmail.com
